@@ -1,0 +1,381 @@
+{
+  FrameLayout;
+  layout_width='match_parent';
+  layout_height='match_parent';
+  {
+    LinearLayout;
+    orientation='vertical';
+    layout_width='fill';
+    layout_height='fill';
+    focusable="true",
+    focusableInTouchMode="true",
+    backgroundColor='#fffffff';
+
+    id="kion";
+
+    fitsSystemWindows="true",
+
+    ------信息列表
+    {
+      LinearLayout;
+      orientation='vertical';
+      layout_width='fill';
+      layout_height='fill';
+
+      {
+        ScrollView;
+        layout_weight='1';
+        layout_width='fill';
+        layout_height='0dp';
+        rotation="180";
+        verticalScrollBarEnabled=false;
+        fillViewport='true';
+
+        backgroundColor='0x00000000';
+
+
+        {
+          LinearLayout;
+          orientation='vertical';
+          layout_width='fill';
+          layout_height='fill';
+          gravity="right";
+          backgroundColor='0x00000000';
+          padding='13dp';
+          rotation="180";
+          id='textlist';
+        };
+      };
+
+      --------输入框
+ -------- 输入框模块
+
+      {
+        CardView;
+        layout_width='match_parent';
+        layout_height='wrap_content';
+        layout_margin='15dp';
+        cardElevation='20dp';
+
+        radius='120';
+        {
+          LinearLayout;
+          layout_width='match_parent';
+          layout_height='wrap_content';
+          orientation="vertical";
+          id="bottomContainer";
+
+          {
+            LinearLayout;
+            orientation='horizontal';
+            layout_width='fill';
+            layout_height='wrap_content';
+            background='#FFFFff';
+            padding="7dp";
+
+
+
+
+            {
+              ImageView;
+              layout_width='95';
+              layout_height='95';
+              id='voiceBtn';
+              src= 'res/y.png';
+              layout_gravity='center';
+              scaleType='fitXY';
+            };
+
+            {
+              LinearLayout;
+              layout_width='0dp';
+              layout_height='wrap_content';
+
+              layout_weight='1';
+              match_parent='horizontal';
+              layout_marginLeft='5dp';
+
+
+
+              {
+                FrameLayout;
+                layout_width='match_parent';
+                layout_height='wrap_content';
+                layout_weight='1';
+
+
+                {
+                  EditText;
+                  layout_width='match_parent';
+                  layout_height='wrap_content';
+                  id='Edit';
+                  textSize='19sp';
+                  background='#ffffff';
+                  maxLines='3';
+                  InputType='131073';
+                  layout_gravity='center';
+
+                };
+
+                {
+                  LinearLayout;
+                  layout_width='match_parent';
+                  layout_height='45.5dp';
+                  {
+                    CardView;
+                    layout_height='40dp';
+                    layout_width='match_parent' ;
+                    CardElevation='0';
+                    elevation="0";
+                    layout_gravity='center';
+
+
+                    Radius='26dp';
+                    visibility=View.GONE;
+                    id='voiceInputBox';
+
+
+                    {
+                      Button;
+                      layout_width='match_parent' ;
+                      layout_height='40dp';
+                      text='按住 说话';
+                      gravity='center';
+                      textSize='15sp';
+                      textColor='#f';
+                      background='#00000000';
+                      id='voiceStatusbutton';
+
+                    };
+
+                  };
+                };
+              };
+
+              {
+                ImageView;
+                layout_width='95';
+                layout_height='95';
+                layout_marginLeft='10dp';
+                id='emojiBtn';
+                src='res/b.png';
+                layout_gravity='center';
+                scaleType='fitXY';
+                Elevation='1';
+
+              };
+
+
+              {
+                ImageView;
+                layout_width='105';
+                layout_height='105';
+                layout_marginLeft='10dp';
+                src='res/j.png';
+                layout_gravity='center';
+                scaleType='fitXY';
+
+                id='addButton';
+                visibility=View.VISIBLE;
+              };
+            };
+
+            {
+              CardView;
+              layout_width='55dp';
+              layout_height='35dp';
+              layout_marginLeft='8dp';
+              layout_marginRight='8dp';
+              layout_gravity='center';
+
+              id='textin';
+              visibility=View.GONE;
+
+              radius='30';
+
+              {
+                TextView;
+                layout_height='wrap';
+                text='发送';
+                textSize='16sp';
+                layout_gravity='center';
+                textColor='#f';
+
+
+              };
+
+
+
+
+            };
+
+          };
+
+          {
+            LinearLayout;
+            id='EmojiPanel';
+            layout_width='match_parent';
+            layout_height='wrap_content';
+            visibility=View.GONE;
+            layout_gravity='center';
+
+          };
+          -----功能面板
+          {
+            LinearLayout;
+            id='functionPanel';
+            layout_width='match_parent';
+            layout_height='fill';
+            visibility=View.GONE;
+            layout_marginTop='0.5dp';
+            background='#ffffff';
+            gravity='top';
+
+
+
+
+
+            {
+              LinearLayout;
+              layout_width='0dp';
+              layout_height='wrap';
+              layout_weight='1';
+              orientation='vertical';
+              gravity='center';
+              layout_marginTop='20dp';
+
+              {
+                CardView;
+                layout_width='50dp';
+                layout_height='50dp';
+                background='#ffffff';
+                radius='20';
+                Elevation='4';
+                {
+                  ImageView;
+                  layout_width='40dp';
+                  layout_height='38dp';
+                  src='res/x.png';
+                  id="image";
+                  scaleType='fitXY';
+                  layout_gravity='center';
+                };
+              };
+              { TextView; text='相册'; textSize='12sp'; gravity='center';textColor='#f';layout_marginTop='8dp'; };
+            };
+
+
+            {
+              LinearLayout;
+              layout_width='0dp';
+              layout_height='wrap';
+              layout_weight='1';
+              orientation='vertical';
+              gravity='center';
+              layout_marginTop='20dp';
+              {
+                CardView;
+                layout_width='50dp';
+                layout_height='50dp';
+                background='#ffffff';
+                radius='20';
+                Elevation='4';
+                {
+                  ImageView;
+                  layout_width='40dp';
+                  layout_height='40dp';
+                  src='res/xj.png';
+
+                  scaleType='fitXY';
+                  layout_gravity='center';
+                };
+              };
+              { TextView; text='拍摄'; textSize='12sp'; gravity='center'; layout_marginTop='8dp';};
+            };
+
+
+
+            {
+              LinearLayout;
+              layout_width='0dp';
+              layout_height='wrap';
+              layout_weight='1';
+              orientation='vertical';
+              gravity='center';
+              layout_marginTop='20dp';
+              {
+                CardView;
+                layout_width='50dp';
+                layout_height='50dp';
+                background='#ffffff';
+                radius='20';
+                Elevation='4';
+                {
+                  ImageView;
+                  layout_width='40dp';
+                  layout_height='40dp';
+                  src='res/yy.png';
+                  layout_gravity='center';
+                  scaleType='fitXY';
+
+                };
+              };
+              { TextView; text='语音通话'; textSize='12sp'; gravity='center';textColor='#f';layout_marginTop='8dp'; };
+            };
+
+
+            {
+              LinearLayout;
+              layout_width='0dp';
+              layout_height='wrap';
+              layout_weight='1';
+              orientation='vertical';
+              gravity='center';
+              layout_marginTop='20dp';
+              {
+                CardView;
+                layout_width='50dp';
+                layout_height='50dp';
+                background='#ffffff';
+                radius='20';
+                Elevation='4';
+                {
+                  ImageView;
+                  layout_width='40dp';
+                  layout_height='40dp';
+                  src='res/s.png';
+                  scaleType='fitXY';
+                  layout_gravity='center';
+
+                };
+              };
+              { TextView; text='视频通话'; textSize='12sp'; gravity='center';textColor='#f';layout_marginTop='8dp'; };
+            };
+          };
+
+        };
+
+      };
+    };
+
+  };
+  {
+    CardView;
+    layout_width='60dp';
+    layout_height='60dp';
+    background='#ffffff';
+    radius='50dp';
+    Elevation='4';
+    layout_gravity='right|center';
+    layout_marginTop='200dp';
+    layout_marginRight='10dp';
+    {
+      ImageView;
+      layout_width='40dp';
+      layout_height='40dp';
+      src= 'res/sc.png';
+      layout_gravity='center';
+      id="clear";
+    };
+  };
+}

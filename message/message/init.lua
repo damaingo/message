@@ -1,0 +1,25 @@
+--名称
+appname="message"
+--版本号
+appver="1.0"
+--版本
+appcode="1"
+--SDK
+appsdk="15"
+--包名
+packagename="com.message.damain"
+--调试模式
+debugmode=false
+--应用权限
+user_permission={
+  "INTERNET",
+  "POST_NOTIFICATIONS",
+  "READ_MEDIA_AUDIO",
+  "READ_MEDIA_IMAGES",
+  "RECORD_AUDIO",
+  "WRITE_EXTERNAL_STORAGE",
+}
+--跳过编译
+skip_compilation={
+
+}
